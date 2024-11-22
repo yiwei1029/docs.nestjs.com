@@ -10,20 +10,20 @@
 
 #### Prerequisites
 
-Please make sure that [Node.js](https://nodejs.org) (version >= 16) is installed on your operating system.
+请确保你的操作系统上安装了 [Node.js](https://nodejs.org) (版本 >= 16)。
 
 #### Setup
 
-Setting up a new project is quite simple with the [Nest CLI](/cli/overview). With [npm](https://www.npmjs.com/) installed, you can create a new Nest project with the following commands in your OS terminal:
+使用 [Nest CLI](/cli/overview) 设置新项目非常简单。安装 [npm](https://www.npmjs.com/) 后，您可以在 OS 终端中使用以下命令创建一个新的 Nest 项目：
 
 ```bash
 $ npm i -g @nestjs/cli
 $ nest new project-name
 ```
 
-> info **Hint** To create a new project with TypeScript's [stricter](https://www.typescriptlang.org/tsconfig#strict) feature set, pass the `--strict` flag to the `nest new` command.
+> info **提示** 要使用 TypeScript 的 [stricter](https://www.typescriptlang.org/tsconfig#strict) 功能集创建新项目，请将 `--strict` 标志传递给 `nest new` 命令。
 
-The `project-name` directory will be created, node modules and a few other boilerplate files will be installed, and a `src/` directory will be created and populated with several core files.
+The `project-name` directory will be created, node modules and a few other boilerplate files will be installed, and a `src/` directory will be created and populated with several core files.将创建`project-name`目录，安装node模块和一些其他样板文档，并创建`src/`目录并填充几个核心文档。
 
 <div class="file-tree">
   <div class="item">src</div>
@@ -36,15 +36,15 @@ The `project-name` directory will be created, node modules and a few other boile
   </div>
 </div>
 
-Here's a brief overview of those core files:
+Here's a brief overview of those core files:以下是这些核心文档的简要概述：
 
 |                          |                                                                                                                     |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| `app.controller.ts`      | A basic controller with a single route.                                                                             |
-| `app.controller.spec.ts` | The unit tests for the controller.                                                                                  |
-| `app.module.ts`          | The root module of the application.                                                                                 |
-| `app.service.ts`         | A basic service with a single method.                                                                               |
-| `main.ts`                | The entry file of the application which uses the core function `NestFactory` to create a Nest application instance. |
+| `app.controller.ts`      | 具有单一路由的基本控制器。                                                                       
+| `app.controller.spec.ts` | 控制器的单元测试                                                                               
+| `app.module.ts`          | 应用的根模块                                                                             
+| `app.service.ts`         | 有单一方法的一个基础服务                                                                          
+| `main.ts`                | 应用进程的入口文档，使用核心函数`NestFactory`创建 Nest 应用进程实例。
 
 The `main.ts` includes an async function, which will **bootstrap** our application:
 
