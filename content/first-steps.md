@@ -1,6 +1,7 @@
 ### First steps
 
 In this set of articles, you'll learn the **core fundamentals** of Nest. To get familiar with the essential building blocks of Nest applications, we'll build a basic CRUD application with features that cover a lot of ground at an introductory level.
+在本系列文章中，您将了解 Nest 的**核心基础知识**。为了熟悉 Nest 应用进程的基本构建块，我们将构建一个基本的 CRUD 应用进程，该应用进程的功能涵盖了入门级的很多内容。
 
 #### Language
 
