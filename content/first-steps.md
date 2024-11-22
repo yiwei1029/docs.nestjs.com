@@ -17,13 +17,13 @@
 使用 [Nest CLI](/cli/overview) 设置新项目非常简单。安装 [npm](https://www.npmjs.com/) 后，您可以在 OS 终端中使用以下命令创建一个新的 Nest 项目：
 
 ```bash
-$ npm i -g @nestjs/cli
-$ nest new project-name
+npm i -g @nestjs/cli
+nest new project-name
 ```
 
 > info **提示** 要使用 TypeScript 的 [stricter](https://www.typescriptlang.org/tsconfig#strict) 功能集创建新项目，请将 `--strict` 标志传递给 `nest new` 命令。
 
-The `project-name` directory will be created, node modules and a few other boilerplate files will be installed, and a `src/` directory will be created and populated with several core files.将创建`project-name`目录，安装node模块和一些其他样板文档，并创建`src/`目录并填充几个核心文档。
+我们将创建`project-name`目录，安装node模块和一些其他模板文件，并创建`src/`目录并写入几个核心文件。
 
 <div class="file-tree">
   <div class="item">src</div>
@@ -36,17 +36,17 @@ The `project-name` directory will be created, node modules and a few other boile
   </div>
 </div>
 
-Here's a brief overview of those core files:以下是这些核心文档的简要概述：
+以下是这些核心的简要概述：
 
-|                          |                                                                                                                     |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| `app.controller.ts`      | 具有单一路由的基本控制器。                                                                       
-| `app.controller.spec.ts` | 控制器的单元测试                                                                               
-| `app.module.ts`          | 应用的根模块                                                                             
-| `app.service.ts`         | 有单一方法的一个基础服务                                                                          
-| `main.ts`                | 应用进程的入口文档，使用核心函数`NestFactory`创建 Nest 应用进程实例。
+| | |
+|-|-|
+| `app.controller.ts`      | 具有单一路由的基本控制器。|
+| `app.controller.spec.ts` | 控制器的单元测试|
+| `app.module.ts`          | 应用的根模块|
+| `app.service.ts`         | 有单一方法的一个基础服务|
+| `main.ts`                | 应用进程的入口文件，使用核心函数`NestFactory`创建 Nest 应用进程实例。|
 
-The `main.ts` includes an async function, which will **bootstrap** our application:
+`main.ts`文件包含一个异步函数来**启动**我们的应用。
 
 ```typescript
 @@filename(main)
@@ -70,7 +70,7 @@ async function bootstrap() {
 bootstrap();
 ```
 
-To create a Nest application instance, we use the core `NestFactory` class. `NestFactory` exposes a few static methods that allow creating an application instance. The `create()` method returns an application object, which fulfills the `INestApplication` interface. This object provides a set of methods which are described in the coming chapters. In the `main.ts` example above, we simply start up our HTTP listener, which lets the application await inbound HTTP requests.
+To create a Nest application instance, we use the core `NestFactory` class. `NestFactory` exposes a few static methods that allow creating an application instance. The `create()` method returns an application object, which fulfills the `INestApplication` interface. This object provides a set of methods which are described in the coming chapters. In the `main.ts` example above, we simply start up our HTTP listener, which lets the application await inbound HTTP requests.要创建 Nest 应用进程实例，我们使用核心的`NestFactory`类。`NestFactory`公开了一些允许创建应用进程实例的静态方法。`create()`方法返回一个应用进程对象，该对象实现`INestApplication`接口。此对象提供了一组方法，将在接下来的章节中介绍。在上面的`main.ts`示例中，我们只需启动 HTTP 监听器，它就可以让应用进程等待即将进入 HTTP 请求。
 
 Note that a project scaffolded with the Nest CLI creates an initial project structure that encourages developers to follow the convention of keeping each module in its own dedicated directory.
 
@@ -100,7 +100,7 @@ const app = await NestFactory.create<NestExpressApplication>(AppModule);
 Once the installation process is complete, you can run the following command at your OS command prompt to start the application listening for inbound HTTP requests:
 
 ```bash
-$ npm run start
+npm run start
 ```
 
 > info **Hint** To speed up the development process (x20 times faster builds), you can use the [SWC builder](/recipes/swc) by passing the `-b swc` flag to the `start` script, as follows `npm run start -- -b swc`.
@@ -110,7 +110,7 @@ This command starts the app with the HTTP server listening on the port defined i
 To watch for changes in your files, you can run the following command to start the application:
 
 ```bash
-$ npm run start:dev
+npm run start:dev
 ```
 
 This command will watch your files, automatically recompiling and reloading the server.
